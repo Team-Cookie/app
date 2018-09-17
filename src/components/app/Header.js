@@ -25,13 +25,21 @@ class Header extends Component {
         <nav>
           {/* TODO: add logo as home */}
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <Link to="/get-started">Get Started</Link>
+          <Link to="/find">Find a Pet</Link>
           { user
-            ? <Link to="/" onClick={this.handleLogout}>Logout</Link>
-            : <Link to="/auth">Signin</Link>
+            ? <div>
+              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/post">Post Pet</Link>
+              <Link to="/" onClick={this.handleLogout}>Logout</Link>
+
+            </div>
+            : 
+            <Link to="/auth">Signin</Link>
           }
         </nav>
         { user && <span>Welcome, {user.name}</span> }
+        <Error/>
       </header>
     );
   }

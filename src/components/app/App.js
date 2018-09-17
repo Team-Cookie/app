@@ -36,7 +36,7 @@ class App extends PureComponent {
               <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/auth" component={Auth}/>
-                <PrivateRoute exact path="/pets" component={PetDashboard}/>
+                <PrivateRoute exact path="/find" component={PetDashboard}/>
                 <PrivateRoute exact path="/post" component={PostPet}/>
                 <Redirect to="/"/>
               </Switch>
